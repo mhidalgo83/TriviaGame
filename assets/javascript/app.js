@@ -97,7 +97,6 @@ $(document).ready(function () {
         }
         timer();
 
-        //clicking an answer will pause the time and setup answerPage
         $('.thisChoice').on('click',function(){
             userPick = $(this).data('index');
             clearInterval(intervalId);
@@ -128,13 +127,14 @@ $(document).ready(function () {
 
     function answerPage(){
         $('#currentQuestion').empty();
-        $('.thisChoice').empty(); //Clears question page
+        $('.thisChoice').empty(); 
         $("#question").empty();
     
         var rightAnswer = triviaQuestions[currentQuestion].answers[triviaQuestions[currentQuestion].correctAnswer];
         var rightAnswer = triviaQuestions[currentQuestion].correctAnswer;
         $('#image').html("<img src="+images[currentQuestion]+" width: 300px;>");
-        //checks to see correct, incorrect, or unanswered
+
+        //If/else to check answer and game state...
         if((userPick == rightAnswer) && (answered == true)){
             correct++;
             $('#message').html(messages.correct);
