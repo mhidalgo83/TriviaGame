@@ -1,0 +1,19 @@
+body {
+    margin: 20px;
+    text-align: center;
+    font-family: 'Bowlby One SC', cursive;
+    color: teal; 
+}
+
+h1 {
+    font-size: 80px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+div {
+    font-size: 20px;
+}
+
